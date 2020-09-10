@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.NoteActivity">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp"
+        android:tint="@color/colorSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_24" />
+
+    <Button
+    android:id="@+id/btnSaveNote"
+    style="@style/Widget.MaterialComponents.Button.TextButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="28dp"
+    android:fontFamily="@font/zillaslabbold"
+    android:text="Save"
+    android:textSize="18sp"
+    android:textAllCaps="false"
+    android:textColor="@color/colorSecondary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDeleteNote"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/zillaslabbold"
+        android:text="Del"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topBorder_etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorSecondary"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/etNoteTitle"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveNote"
+        tools:layout_editor_absoluteX="0dp" />
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/Transparent"
+        android:ems="10"
+        android:fontFamily="@font/zillaslabbold"
+        android:hint="The Title"
+        android:textColorHint="@color/colorTerciary"
+        android:inputType="textMultiLine"
+        android:maxLength="20"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="25dp"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveNote" />
+    <TextView
+        android:id="@+id/bottomBorder_etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorSecondary"
+        app:layout_constraintBottom_toTopOf="@+id/etNoteText"
+        app:layout_constraintTop_toBottomOf="@+id/etNoteTitle"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <EditText
+        android:id="@+id/etNoteText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/Transparent"
+        android:ems="10"
+        android:fontFamily="@font/zillaslab"
+        android:gravity="start"
+        android:hint="The Note"
+        android:textColorHint="@color/colorTerciary"
+        android:inputType="textMultiLine"
+        android:paddingTop="30dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="25dp"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomBorder_etNoteTitle" />
+
+    <TextView
+        android:id="@+id/bottomBorder_etNoteText"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorSecondary"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNoteText"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
