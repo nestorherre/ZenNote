@@ -62,7 +62,7 @@ class NoteActivity : AppCompatActivity() {
             val note = getCurrentNote()
             note.id = noteID!!.toInt()
             noteViewModel.delete(note)
-            disableEditTexts()
+            disableUI()
             Toast.makeText(this,"Note Deleted", Toast.LENGTH_SHORT).show()
             delayActivityFinish()
         }
@@ -75,16 +75,17 @@ class NoteActivity : AppCompatActivity() {
 
         noteViewModel.noteSaved.observe(this, Observer {
             if (it){
-                disableEditTexts()
+                disableUI()
                 Toast.makeText(this,"Note Saved", Toast.LENGTH_SHORT).show()
                 delayActivityFinish()
             }
         })
     }
 
-    private fun disableEditTexts() {
+    private fun disableUI() {
         etNoteTitle.isEnabled = false
         etNoteText.isEnabled = false
+        btnSaveNote.isEnabled = false
     }
 
     private fun delayActivityFinish() {
