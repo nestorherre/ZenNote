@@ -8,4 +8,6 @@ App de notas para Android desarrollada en Kotlin, utilizando arquitectura MVVM.
 - Koin para la Inyección de Dependencias
 - Truth y JUnit para las Pruebas Unitarias
 
+![](zennote.gif)
+
 
